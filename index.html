@@ -22,45 +22,6 @@ h2{font-size:32px;margin-bottom:20px;}
 .stat h3{margin:0;font-size:32px;color:#2563eb;}
 .stat p{margin:4px 0 0;color:#666;}
 
-/* Новый блок с проектами — горизонтальный слайдер */
-.projects-slider {position:relative;overflow:hidden;margin-top:40px;}
-.slider-track {display:flex;transition:transform 0.5s ease;}
-.project-slide {
-  min-width:100%;
-  flex-shrink:0;
-  position:relative;
-  border-radius:10px;
-  overflow:hidden;
-  box-shadow:0 5px 20px rgba(0,0,0,0.1);
-  height:400px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background: linear-gradient(135deg, rgba(33,103,238,0.7), rgba(16,55,122,0.9));
-}
-.project-info {
-  color:white;
-  text-align:center;
-  padding:20px;
-  border-radius:6px;
-}
-.slider-button {
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  background:rgba(0,0,0,0.5);
-  border:none;
-  color:white;
-  font-size:32px;
-  padding:10px 15px;
-  cursor:pointer;
-  border-radius:50%;
-  transition:0.3s;
-}
-.slider-button:hover {background:rgba(0,0,0,0.8);}
-.slider-prev {left:10px;}
-.slider-next {right:10px;}
-
 /* Контакты */
 .contact{display:flex;gap:14px;flex-wrap:nowrap;justify-content:center;margin-top:25px;}
 .contact a{padding:12px 22px;border-radius:6px;color:white;text-decoration:none;font-weight:600;}
@@ -93,62 +54,7 @@ h2{font-size:32px;margin-bottom:20px;}
 
 <div class="section" id="projects">
 <h2>Проекты</h2>
-
-<div class="projects-slider">
-  <button class="slider-button slider-prev" onclick="prevSlide()">‹</button>
-  <div class="slider-track">
-    <div class="project-slide">
-      <div class="project-info">
-        <h3>Ребрендинг кофейни</h3>
-        <p>Рост выручки +35% после обновления логотипа и маркетинговой стратегии.</p>
-      </div>
-    </div>
-    <div class="project-slide">
-      <div class="project-info">
-        <h3>Онлайн-школа</h3>
-        <p>Увеличение регистраций на курсы на +50% через целевую маркетинговую стратегию.</p>
-      </div>
-    </div>
-    <div class="project-slide">
-      <div class="project-info">
-        <h3>Выставочный проект</h3>
-        <p>Привлечение +25% посетителей благодаря PR-кампании.</p>
-      </div>
-    </div>
-    <div class="project-slide">
-      <div class="project-info">
-        <h3>Брендинг стартапа</h3>
-        <p>Успешный запуск с высокой клиентской базой через фирменный стиль и сайт.</p>
-      </div>
-    </div>
-    <div class="project-slide">
-      <div class="project-info">
-        <h3>Контент-стратегия</h3>
-        <p>Рост вовлеченности +40% через контент-план и соцсети.</p>
-      </div>
-    </div>
-    <div class="project-slide">
-      <div class="project-info">
-        <h3>Ребрендинг международной компании</h3>
-        <p>Рост лояльности +30% после редизайна и маркетинговых кампаний.</p>
-      </div>
-    </div>
-    <div class="project-slide">
-      <div class="project-info">
-        <h3>Маркетинговая кампания стартапа</h3>
-        <p>Привлечение 2 крупных инвесторов через PR и соцсети.</p>
-      </div>
-    </div>
-    <div class="project-slide">
-      <div class="project-info">
-        <h3>Локализация бренда</h3>
-        <p>Успешный выход на 2 новых рынка благодаря адаптации бренда.</p>
-      </div>
-    </div>
-  </div>
-  <button class="slider-button slider-next" onclick="nextSlide()">›</button>
-</div>
-
+<!-- Здесь можно будет добавить проекты позже -->
 </div>
 
 <div class="section">
@@ -161,27 +67,6 @@ h2{font-size:32px;margin-bottom:20px;}
 </div>
 
 <div class="footer">© 2023–2026</div>
-
-<script>
-let currentIndex = 0;
-const slides = document.querySelectorAll('.project-slide');
-const totalSlides = slides.length;
-
-function updateSlider() {
-  const track = document.querySelector('.slider-track');
-  track.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
-
-function nextSlide() {
-  currentIndex = (currentIndex + 1) % totalSlides;
-  updateSlider();
-}
-
-function prevSlide() {
-  currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-  updateSlider();
-}
-</script>
 
 </body>
 </html>
