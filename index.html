@@ -2,20 +2,13 @@
 <html lang="ru">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>Andrew Li | Маркетинг и брендинг</title>
-
 <meta name="description" content="От логотипа до маркетинга. Строим фундамент сильного бренда и помогаем бизнесу повышать продажи. Более 100 реализованных проектов в разных странах.">
 
 <style>
-
-html{
-  scroll-behavior:smooth;
-}
-
+html{scroll-behavior:smooth;}
 body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,Arial;
@@ -24,114 +17,46 @@ body{
   line-height:1.6;
 }
 
-.section{
-  max-width:1000px;
-  margin:auto;
-  padding:100px 20px;
-}
+.section{max-width:1000px;margin:auto;padding:100px 20px;}
+.hero{text-align:center;padding:120px 20px;}
+.logo{width:220px;max-width:90%;display:block;margin:auto;margin-bottom:30px;}
+.hero h1{font-size:36px;margin-bottom:10px;}
+.hero p{font-size:20px;color:#555;}
+.button{display:inline-block;margin-top:30px;padding:14px 28px;background:#2563eb;color:white;text-decoration:none;border-radius:6px;font-weight:600;transition:0.3s;}
+.button:hover{background:#1d4ed8;}
+h2{font-size:32px;margin-bottom:20px;}
+.about{font-size:18px;color:#444;max-width:650px;}
+.stats{display:flex;gap:40px;flex-wrap:wrap;margin-top:30px;}
+.stat h3{margin:0;font-size:32px;color:#2563eb;}
+.stat p{margin:4px 0 0;color:#666;}
 
-.hero{
-  text-align:center;
-  padding:120px 20px;
-}
-
-.logo{
-  width:220px;
-  max-width:90%;
-  display:block;
-  margin:auto;
-  margin-bottom:30px;
-}
-
-.hero h1{
-  font-size:36px;
-  margin-bottom:10px;
-}
-
-.hero p{
-  font-size:20px;
-  color:#555;
-}
-
-.button{
-  display:inline-block;
-  margin-top:30px;
-  padding:14px 28px;
-  background:#2563eb;
-  color:white;
-  text-decoration:none;
-  border-radius:6px;
-  font-weight:600;
-  transition:0.3s;
-}
-
-.button:hover{
-  background:#1d4ed8;
-}
-
-h2{
-  font-size:32px;
-  margin-bottom:20px;
-}
-
-.about{
-  font-size:18px;
-  color:#444;
-  max-width:650px;
-}
-
-.stats{
-  display:flex;
-  gap:40px;
-  flex-wrap:wrap;
-  margin-top:30px;
-}
-
-.stat h3{
-  margin:0;
-  font-size:32px;
-  color:#2563eb;
-}
-
-.stat p{
-  margin:4px 0 0;
-  color:#666;
-}
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:24px;
-  margin-top:40px;
-}
-
-.card{
+/* Карточки проектов */
+.card-slider {
   background:white;
   padding:16px;
   border-radius:10px;
   box-shadow:0 5px 20px rgba(0,0,0,0.05);
-  transition:0.3s;
+  margin-bottom:30px;
 }
 
-.card:hover{
-  transform:translateY(-6px);
-}
+.card-slider h3{margin:0 0 5px;}
+.card-slider p{color:#444;font-size:16px;}
 
-.card img{
-  width:100%;
-  border-radius:6px;
-  margin-bottom:10px;
-}
+.slider-container {overflow:hidden;width:100%;margin-top:15px;border-radius:6px;}
+.slider-track {display:flex;transition: transform 0.4s ease;}
+.slider-track img {width:100%;flex-shrink:0;margin-right:10px;border-radius:6px;}
+.slider-buttons {display:flex;justify-content:space-between;margin-top:10px;}
+.slider-buttons button {padding:6px 12px;border:none;border-radius:4px;background:#2563eb;color:white;cursor:pointer;}
+.slider-buttons button:hover {background:#1d4ed8;}
 
-/* Исправленный блок контактов */
+/* Контакты */
 .contact{
   display:flex;
   gap:14px;
-  flex-wrap:nowrap; /* кнопки в одну строку */
-  justify-content:center; /* центрирование по горизонтали */
+  flex-wrap:nowrap;
+  justify-content:center;
   margin-top:25px;
 }
-
 .contact a{
   padding:12px 22px;
   border-radius:6px;
@@ -139,153 +64,186 @@ h2{
   text-decoration:none;
   font-weight:600;
 }
-
 .telegram{background:#229ED9;}
 .email{background:#444;}
 .whatsapp{background:#25D366;}
-
-.footer{
-  text-align:center;
-  padding:40px;
-  border-top:1px solid #eee;
-  color:#777;
-  margin-top:80px;
-}
-
+.footer{ text-align:center; padding:40px; border-top:1px solid #eee; color:#777; margin-top:80px; }
 </style>
-
 </head>
 
 <body>
-
 <div class="hero">
-
 <img src="logo.PNG" class="logo" alt="Andrew Li">
-
 <h1>Маркетинг и брендинг для бизнеса</h1>
-
-<p>
-От логотипа до маркетинга. Строим фундамент сильного бренда и помогаем бизнесу повышать продажи.
-</p>
-
-<a class="button" href="#projects">
-Посмотреть проекты
-</a>
-
+<p>От логотипа до маркетинга. Строим фундамент сильного бренда и помогаем бизнесу повышать продажи.</p>
+<a class="button" href="#projects">Посмотреть проекты</a>
 </div>
 
 <div class="section">
-
 <h2>Обо мне</h2>
-
 <p class="about">
 От логотипа до маркетинга. Строим фундамент сильного бренда и помогаем бизнесу повышать продажи. За последние годы реализовал более <b>100 проектов</b> в разных странах и отраслях.
 </p>
-
 <div class="stats">
-
-<div class="stat">
-<h3>100+</h3>
-<p>проектов</p>
+<div class="stat"><h3>100+</h3><p>проектов</p></div>
+<div class="stat"><h3>10+</h3><p>сфер бизнеса</p></div>
+<div class="stat"><h3>5+</h3><p>стран</p></div>
 </div>
-
-<div class="stat">
-<h3>10+</h3>
-<p>сфер бизнеса</p>
-</div>
-
-<div class="stat">
-<h3>5+</h3>
-<p>стран</p>
-</div>
-
-</div>
-
 </div>
 
 <div class="section" id="projects">
-
 <h2>Проекты</h2>
 
-<div class="cards">
-
-<div class="card">
-<img src="https://picsum.photos/400/200?1" loading="lazy">
-<p><b>Ребрендинг кофейни</b><br>
-Задача: повысить привлекательность бренда. Решение: обновление логотипа и разработка новой маркетинговой стратегии. Результат: рост выручки +35%.</p>
+<!-- Проект 1 -->
+<div class="card-slider">
+<h3>Ребрендинг кофейни</h3>
+<p>Задача: повысить привлекательность бренда. Решение: обновление логотипа и маркетинговой стратегии.</p>
+<div class="slider-container">
+<div class="slider-track">
+<img src="https://picsum.photos/400/200?1" alt="График 1">
+<img src="https://picsum.photos/400/200?2" alt="График 2">
+<img src="https://picsum.photos/400/200?3" alt="График 3">
+<img src="https://picsum.photos/400/200?4" alt="График 4">
+</div>
+</div>
+<div class="slider-buttons"><button onclick="slidePrev(this)">‹</button><button onclick="slideNext(this)">›</button></div>
 </div>
 
-<div class="card">
-<img src="https://picsum.photos/400/200?2" loading="lazy">
-<p><b>Онлайн-школа</b><br>
-Задача: увеличить регистрацию на курсы. Решение: создание целевой маркетинговой стратегии. Результат: +50% регистраций.</p>
+<!-- Проект 2 -->
+<div class="card-slider">
+<h3>Онлайн-школа</h3>
+<p>Задача: увеличить регистрацию на курсы. Решение: целевая маркетинговая стратегия. Результат: +50% регистраций.</p>
+<div class="slider-container">
+<div class="slider-track">
+<img src="https://picsum.photos/400/200?5" alt="График 1">
+<img src="https://picsum.photos/400/200?6" alt="График 2">
+<img src="https://picsum.photos/400/200?7" alt="График 3">
+<img src="https://picsum.photos/400/200?8" alt="График 4">
+</div>
+</div>
+<div class="slider-buttons"><button onclick="slidePrev(this)">‹</button><button onclick="slideNext(this)">›</button></div>
 </div>
 
-<div class="card">
-<img src="https://picsum.photos/400/200?3" loading="lazy">
-<p><b>Выставочный проект</b><br>
-Задача: привлечь больше посетителей на выставку. Решение: PR-кампания в соцсетях и СМИ. Результат: +25% посетителей.</p>
+<!-- Проект 3 -->
+<div class="card-slider">
+<h3>Выставочный проект</h3>
+<p>Задача: привлечь больше посетителей. Решение: PR-кампания. Результат: +25% посетителей.</p>
+<div class="slider-container">
+<div class="slider-track">
+<img src="https://picsum.photos/400/200?9" alt="График 1">
+<img src="https://picsum.photos/400/200?10" alt="График 2">
+<img src="https://picsum.photos/400/200?11" alt="График 3">
+<img src="https://picsum.photos/400/200?12" alt="График 4">
+</div>
+</div>
+<div class="slider-buttons"><button onclick="slidePrev(this)">‹</button><button onclick="slideNext(this)">›</button></div>
 </div>
 
-<div class="card">
-<img src="https://picsum.photos/400/200?4" loading="lazy">
-<p><b>Брендинг для стартапа</b><br>
-Задача: разработать уникальный бренд для нового бизнеса. Решение: создание логотипа, фирменного стиля и сайта. Результат: успешный запуск стартапа с высокой клиентской базой.</p>
+<!-- Проект 4 -->
+<div class="card-slider">
+<h3>Брендинг стартапа</h3>
+<p>Задача: создать уникальный бренд. Решение: логотип, фирменный стиль, сайт. Результат: успешный запуск с высокой клиентской базой.</p>
+<div class="slider-container">
+<div class="slider-track">
+<img src="https://picsum.photos/400/200?13" alt="График 1">
+<img src="https://picsum.photos/400/200?14" alt="График 2">
+<img src="https://picsum.photos/400/200?15" alt="График 3">
+<img src="https://picsum.photos/400/200?16" alt="График 4">
+</div>
+</div>
+<div class="slider-buttons"><button onclick="slidePrev(this)">‹</button><button onclick="slideNext(this)">›</button></div>
 </div>
 
-<div class="card">
-<img src="https://picsum.photos/400/200?5" loading="lazy">
-<p><b>Разработка контент-стратегии для бренда</b><br>
-Задача: улучшить видимость бренда в интернете. Решение: создание контент-стратегии и постов для социальных сетей. Результат: рост вовлеченности на 40%.</p>
+<!-- Проект 5 -->
+<div class="card-slider">
+<h3>Контент-стратегия для бренда</h3>
+<p>Задача: улучшить видимость бренда онлайн. Решение: контент-план и соцсети. Результат: рост вовлеченности +40%.</p>
+<div class="slider-container">
+<div class="slider-track">
+<img src="https://picsum.photos/400/200?17" alt="График 1">
+<img src="https://picsum.photos/400/200?18" alt="График 2">
+<img src="https://picsum.photos/400/200?19" alt="График 3">
+<img src="https://picsum.photos/400/200?20" alt="График 4">
+</div>
+</div>
+<div class="slider-buttons"><button onclick="slidePrev(this)">‹</button><button onclick="slideNext(this)">›</button></div>
 </div>
 
-<div class="card">
-<img src="https://picsum.photos/400/200?6" loading="lazy">
-<p><b>Ребрендинг для международной компании</b><br>
-Задача: улучшить имидж и доверие потребителей. Решение: редизайн логотипа и новый подход в маркетинговых кампаниях. Результат: повышение доверия и лояльности клиентов на 30%.</p>
+<!-- Проект 6 -->
+<div class="card-slider">
+<h3>Ребрендинг международной компании</h3>
+<p>Задача: повысить доверие потребителей. Решение: редизайн логотипа и маркетинговые кампании. Результат: рост лояльности +30%.</p>
+<div class="slider-container">
+<div class="slider-track">
+<img src="https://picsum.photos/400/200?21" alt="График 1">
+<img src="https://picsum.photos/400/200?22" alt="График 2">
+<img src="https://picsum.photos/400/200?23" alt="График 3">
+<img src="https://picsum.photos/400/200?24" alt="График 4">
+</div>
+</div>
+<div class="slider-buttons"><button onclick="slidePrev(this)">‹</button><button onclick="slideNext(this)">›</button></div>
 </div>
 
-<div class="card">
-<img src="https://picsum.photos/400/200?7" loading="lazy">
-<p><b>Маркетинговая кампания для стартапа</b><br>
-Задача: привлечь инвесторов. Решение: создание стратегии по привлечению инвесторов через PR и социальные сети. Результат: привлечение двух крупных инвесторов.</p>
+<!-- Проект 7 -->
+<div class="card-slider">
+<h3>Маркетинговая кампания стартапа</h3>
+<p>Задача: привлечь инвесторов. Решение: PR и соцсети. Результат: 2 крупных инвестора.</p>
+<div class="slider-container">
+<div class="slider-track">
+<img src="https://picsum.photos/400/200?25" alt="График 1">
+<img src="https://picsum.photos/400/200?26" alt="График 2">
+<img src="https://picsum.photos/400/200?27" alt="График 3">
+<img src="https://picsum.photos/400/200?28" alt="График 4">
+</div>
+</div>
+<div class="slider-buttons"><button onclick="slidePrev(this)">‹</button><button onclick="slideNext(this)">›</button></div>
 </div>
 
-<div class="card">
-<img src="https://picsum.photos/400/200?8" loading="lazy">
-<p><b>Локализация бренда для выхода на международный рынок</b><br>
-Задача: адаптировать бренд для разных культур. Решение: редизайн продукта и маркетинговых материалов с учётом локальных особенностей. Результат: успешный выход на два новых рынка.</p>
+<!-- Проект 8 -->
+<div class="card-slider">
+<h3>Локализация бренда</h3>
+<p>Задача: адаптировать бренд для разных культур. Решение: редизайн и маркетинг с учетом локальных особенностей. Результат: успешный выход на 2 новых рынка.</p>
+<div class="slider-container">
+<div class="slider-track">
+<img src="https://picsum.photos/400/200?29" alt="График 1">
+<img src="https://picsum.photos/400/200?30" alt="График 2">
+<img src="https://picsum.photos/400/200?31" alt="График 3">
+<img src="https://picsum.photos/400/200?32" alt="График 4">
 </div>
-
+</div>
+<div class="slider-buttons"><button onclick="slidePrev(this)">‹</button><button onclick="slideNext(this)">›</button></div>
 </div>
 
 </div>
 
 <div class="section">
-
 <h2>Контакты</h2>
-
 <div class="contact">
-
-<a class="telegram" href="https://t.me/start_xxx_stop" target="_blank">
-Telegram
-</a>
-
-<a class="email" href="mailto:start_xxx_stop@icloud.com">
-Email
-</a>
-
-<a class="whatsapp" href="https://wa.me/79002460611" target="_blank">
-WhatsApp
-</a>
-
+<a class="telegram" href="https://t.me/start_xxx_stop" target="_blank">Telegram</a>
+<a class="email" href="mailto:start_xxx_stop@icloud.com">Email</a>
+<a class="whatsapp" href="https://wa.me/79002460611" target="_blank">WhatsApp</a>
+</div>
 </div>
 
-</div>
+<div class="footer">© 2023–2026</div>
 
-<div class="footer">
-© 2023–2026
-</div>
+<script>
+function slideNext(btn){
+  const track=btn.closest('.card-slider').querySelector('.slider-track');
+  const w=track.querySelector('img').clientWidth+10;
+  track.style.transform=`translateX(-${Math.min(w*3, getCurrentTranslate(track)+w)}px)`;
+}
+function slidePrev(btn){
+  const track=btn.closest('.card-slider').querySelector('.slider-track');
+  const w=track.querySelector('img').clientWidth+10;
+  track.style.transform=`translateX(${Math.max(0,getCurrentTranslate(track)-w)}px)`;
+}
+function getCurrentTranslate(track){
+  const style=window.getComputedStyle(track);
+  const matrix=new WebKitCSSMatrix(style.transform);
+  return Math.abs(matrix.m41);
+}
+</script>
 
 </body>
 </html>
