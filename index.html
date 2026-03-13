@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,14 +8,7 @@
 
 <style>
 html{scroll-behavior:smooth;}
-body{
-  margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,Arial;
-  background:#ffffff;
-  color:#111;
-  line-height:1.6;
-}
-
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Arial;background:#fff;color:#111;line-height:1.6;}
 .section{max-width:1000px;margin:auto;padding:100px 20px;}
 .hero{text-align:center;padding:120px 20px;}
 .logo{width:220px;max-width:90%;display:block;margin:auto;margin-bottom:30px;}
@@ -30,48 +22,28 @@ h2{font-size:32px;margin-bottom:20px;}
 .stat h3{margin:0;font-size:32px;color:#2563eb;}
 .stat p{margin:4px 0 0;color:#666;}
 
-/* Карточки проектов */
-.card-slider {
-  background:white;
-  padding:16px;
-  border-radius:10px;
-  box-shadow:0 5px 20px rgba(0,0,0,0.05);
-  margin-bottom:30px;
-}
-
+/* Карточки проектов с горизонтальным слайдером графиков */
+.card-slider{background:white;padding:16px;border-radius:10px;box-shadow:0 5px 20px rgba(0,0,0,0.05);margin-bottom:30px;}
 .card-slider h3{margin:0 0 5px;}
 .card-slider p{color:#444;font-size:16px;}
-
-.slider-container {overflow:hidden;width:100%;margin-top:15px;border-radius:6px;}
-.slider-track {display:flex;transition: transform 0.4s ease;}
-.slider-track img {width:100%;flex-shrink:0;margin-right:10px;border-radius:6px;}
-.slider-buttons {display:flex;justify-content:space-between;margin-top:10px;}
-.slider-buttons button {padding:6px 12px;border:none;border-radius:4px;background:#2563eb;color:white;cursor:pointer;}
-.slider-buttons button:hover {background:#1d4ed8;}
+.slider-container{overflow:hidden;width:100%;margin-top:15px;border-radius:6px;}
+.slider-track{display:flex;transition: transform 0.4s ease;}
+.slider-track img{width:100%;flex-shrink:0;margin-right:10px;border-radius:6px;}
+.slider-buttons{display:flex;justify-content:space-between;margin-top:10px;}
+.slider-buttons button{padding:6px 12px;border:none;border-radius:4px;background:#2563eb;color:white;cursor:pointer;}
+.slider-buttons button:hover{background:#1d4ed8;}
 
 /* Контакты */
-.contact{
-  display:flex;
-  gap:14px;
-  flex-wrap:nowrap;
-  justify-content:center;
-  margin-top:25px;
-}
-.contact a{
-  padding:12px 22px;
-  border-radius:6px;
-  color:white;
-  text-decoration:none;
-  font-weight:600;
-}
+.contact{display:flex;gap:14px;flex-wrap:nowrap;justify-content:center;margin-top:25px;}
+.contact a{padding:12px 22px;border-radius:6px;color:white;text-decoration:none;font-weight:600;}
 .telegram{background:#229ED9;}
 .email{background:#444;}
 .whatsapp{background:#25D366;}
-.footer{ text-align:center; padding:40px; border-top:1px solid #eee; color:#777; margin-top:80px; }
+.footer{text-align:center;padding:40px;border-top:1px solid #eee;color:#777;margin-top:80px;}
 </style>
 </head>
-
 <body>
+
 <div class="hero">
 <img src="logo.PNG" class="logo" alt="Andrew Li">
 <h1>Маркетинг и брендинг для бизнеса</h1>
@@ -94,10 +66,10 @@ h2{font-size:32px;margin-bottom:20px;}
 <div class="section" id="projects">
 <h2>Проекты</h2>
 
-<!-- Проект 1 -->
+<!-- 8 карточек с 4 графиками каждая -->
 <div class="card-slider">
 <h3>Ребрендинг кофейни</h3>
-<p>Задача: повысить привлекательность бренда. Решение: обновление логотипа и маркетинговой стратегии.</p>
+<p>Задача: повысить привлекательность бренда. Решение: обновление логотипа и маркетинговой стратегии. Результат: рост выручки +35%.</p>
 <div class="slider-container">
 <div class="slider-track">
 <img src="https://picsum.photos/400/200?1" alt="График 1">
@@ -109,7 +81,6 @@ h2{font-size:32px;margin-bottom:20px;}
 <div class="slider-buttons"><button onclick="slidePrev(this)">‹</button><button onclick="slideNext(this)">›</button></div>
 </div>
 
-<!-- Проект 2 -->
 <div class="card-slider">
 <h3>Онлайн-школа</h3>
 <p>Задача: увеличить регистрацию на курсы. Решение: целевая маркетинговая стратегия. Результат: +50% регистраций.</p>
@@ -124,7 +95,6 @@ h2{font-size:32px;margin-bottom:20px;}
 <div class="slider-buttons"><button onclick="slidePrev(this)">‹</button><button onclick="slideNext(this)">›</button></div>
 </div>
 
-<!-- Проект 3 -->
 <div class="card-slider">
 <h3>Выставочный проект</h3>
 <p>Задача: привлечь больше посетителей. Решение: PR-кампания. Результат: +25% посетителей.</p>
@@ -139,7 +109,6 @@ h2{font-size:32px;margin-bottom:20px;}
 <div class="slider-buttons"><button onclick="slidePrev(this)">‹</button><button onclick="slideNext(this)">›</button></div>
 </div>
 
-<!-- Проект 4 -->
 <div class="card-slider">
 <h3>Брендинг стартапа</h3>
 <p>Задача: создать уникальный бренд. Решение: логотип, фирменный стиль, сайт. Результат: успешный запуск с высокой клиентской базой.</p>
@@ -154,7 +123,6 @@ h2{font-size:32px;margin-bottom:20px;}
 <div class="slider-buttons"><button onclick="slidePrev(this)">‹</button><button onclick="slideNext(this)">›</button></div>
 </div>
 
-<!-- Проект 5 -->
 <div class="card-slider">
 <h3>Контент-стратегия для бренда</h3>
 <p>Задача: улучшить видимость бренда онлайн. Решение: контент-план и соцсети. Результат: рост вовлеченности +40%.</p>
@@ -169,7 +137,6 @@ h2{font-size:32px;margin-bottom:20px;}
 <div class="slider-buttons"><button onclick="slidePrev(this)">‹</button><button onclick="slideNext(this)">›</button></div>
 </div>
 
-<!-- Проект 6 -->
 <div class="card-slider">
 <h3>Ребрендинг международной компании</h3>
 <p>Задача: повысить доверие потребителей. Решение: редизайн логотипа и маркетинговые кампании. Результат: рост лояльности +30%.</p>
@@ -184,7 +151,6 @@ h2{font-size:32px;margin-bottom:20px;}
 <div class="slider-buttons"><button onclick="slidePrev(this)">‹</button><button onclick="slideNext(this)">›</button></div>
 </div>
 
-<!-- Проект 7 -->
 <div class="card-slider">
 <h3>Маркетинговая кампания стартапа</h3>
 <p>Задача: привлечь инвесторов. Решение: PR и соцсети. Результат: 2 крупных инвестора.</p>
@@ -199,7 +165,6 @@ h2{font-size:32px;margin-bottom:20px;}
 <div class="slider-buttons"><button onclick="slidePrev(this)">‹</button><button onclick="slideNext(this)">›</button></div>
 </div>
 
-<!-- Проект 8 -->
 <div class="card-slider">
 <h3>Локализация бренда</h3>
 <p>Задача: адаптировать бренд для разных культур. Решение: редизайн и маркетинг с учетом локальных особенностей. Результат: успешный выход на 2 новых рынка.</p>
@@ -229,18 +194,18 @@ h2{font-size:32px;margin-bottom:20px;}
 
 <script>
 function slideNext(btn){
-  const track=btn.closest('.card-slider').querySelector('.slider-track');
-  const w=track.querySelector('img').clientWidth+10;
-  track.style.transform=`translateX(-${Math.min(w*3, getCurrentTranslate(track)+w)}px)`;
+  const track = btn.closest('.card-slider').querySelector('.slider-track');
+  const w = track.querySelector('img').clientWidth + 10;
+  track.style.transform = `translateX(-${Math.min(w*3, getCurrentTranslate(track)+w)}px)`;
 }
 function slidePrev(btn){
-  const track=btn.closest('.card-slider').querySelector('.slider-track');
-  const w=track.querySelector('img').clientWidth+10;
-  track.style.transform=`translateX(${Math.max(0,getCurrentTranslate(track)-w)}px)`;
+  const track = btn.closest('.card-slider').querySelector('.slider-track');
+  const w = track.querySelector('img').clientWidth + 10;
+  track.style.transform = `translateX(${Math.max(0, getCurrentTranslate(track)-w)}px)`;
 }
 function getCurrentTranslate(track){
-  const style=window.getComputedStyle(track);
-  const matrix=new WebKitCSSMatrix(style.transform);
+  const style = window.getComputedStyle(track);
+  const matrix = new WebKitCSSMatrix(style.transform);
   return Math.abs(matrix.m41);
 }
 </script>
