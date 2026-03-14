@@ -1,70 +1,265 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Andrew Li | Маркетинг и брендинг</title>
-<meta name="description" content="От логотипа до маркетинга. Строим фундамент сильного бренда и помогаем бизнесу повышать продажи. Более 100 реализованных проектов в разных странах.">
 
 <style>
+
 html{scroll-behavior:smooth;}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Arial;background:#fff;color:#111;line-height:1.6;}
-.section{max-width:1000px;margin:auto;padding:100px 20px;}
-.hero{text-align:center;padding:120px 20px;}
-.logo{width:220px;max-width:90%;display:block;margin:auto;margin-bottom:30px;}
-.hero h1{font-size:36px;margin-bottom:10px;}
-.hero p{font-size:20px;color:#555;}
-.button{display:inline-block;margin-top:30px;padding:14px 28px;background:#2563eb;color:white;text-decoration:none;border-radius:6px;font-weight:600;transition:0.3s;}
-.button:hover{background:#1d4ed8;}
-h2{font-size:32px;margin-bottom:20px;}
-.about{font-size:18px;color:#444;max-width:650px;}
-.stats{display:flex;gap:40px;flex-wrap:wrap;margin-top:30px;}
-.stat h3{margin:0;font-size:32px;color:#2563eb;}
-.stat p{margin:4px 0 0;color:#666;}
+
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,Arial;
+background:#fff;
+color:#111;
+line-height:1.6;
+}
+
+.section{
+max-width:1000px;
+margin:auto;
+padding:100px 20px;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:80px 20px;
+
+/* микросетка */
+
+background-image:
+linear-gradient(#eee 1px, transparent 1px),
+linear-gradient(90deg, #eee 1px, transparent 1px);
+
+background-size:40px 40px;
+}
+
+.logo{
+width:320px;
+max-width:90%;
+display:block;
+margin:auto;
+margin-bottom:20px;
+margin-top:-20px;
+}
+
+.hero h1{
+font-size:36px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:20px;
+color:#555;
+}
+
+.button{
+display:inline-block;
+margin-top:30px;
+padding:14px 28px;
+background:#2563eb;
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-weight:600;
+transition:0.3s;
+}
+
+.button:hover{
+background:#1d4ed8;
+}
+
+h2{
+font-size:32px;
+margin-bottom:20px;
+}
+
+.about{
+font-size:18px;
+color:#444;
+max-width:650px;
+}
+
+/* статистика */
+
+.stats{
+display:flex;
+gap:40px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.stat h3{
+margin:0;
+font-size:32px;
+color:#2563eb;
+}
+
+.stat p{
+margin:4px 0 0;
+color:#666;
+}
+
+/* ПРОЕКТЫ */
+
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.project-card{
+border:1px solid #eee;
+border-radius:8px;
+overflow:hidden;
+transition:0.3s;
+background:white;
+}
+
+.project-card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.project-card img{
+width:100%;
+display:block;
+}
+
+.project-title{
+padding:16px;
+font-weight:600;
+}
 
 /* Контакты */
-.contact{display:flex;gap:14px;flex-wrap:nowrap;justify-content:center;margin-top:25px;}
-.contact a{padding:12px 22px;border-radius:6px;color:white;text-decoration:none;font-weight:600;}
+
+.contact{
+display:flex;
+gap:14px;
+flex-wrap:nowrap;
+justify-content:center;
+margin-top:25px;
+}
+
+.contact a{
+padding:12px 22px;
+border-radius:6px;
+color:white;
+text-decoration:none;
+font-weight:600;
+}
+
 .telegram{background:#229ED9;}
 .email{background:#444;}
 .whatsapp{background:#25D366;}
-.footer{text-align:center;padding:40px;border-top:1px solid #eee;color:#777;margin-top:80px;}
+
+.footer{
+text-align:center;
+padding:40px;
+border-top:1px solid #eee;
+color:#777;
+margin-top:80px;
+}
+
 </style>
 </head>
+
 <body>
 
 <div class="hero">
+
 <img src="logo.PNG" class="logo" alt="Andrew Li">
+
 <h1>Маркетинг и брендинг для бизнеса</h1>
-<p>От логотипа до маркетинга. Строим фундамент сильного бренда и помогаем бизнесу повышать продажи.</p>
+
+<p>
+От логотипа до маркетинга. Строим фундамент сильного бренда и помогаем бизнесу повышать продажи.
+</p>
+
 <a class="button" href="#projects">Посмотреть проекты</a>
+
 </div>
 
+
 <div class="section">
+
 <h2>Обо мне</h2>
+
 <p class="about">
 За последние годы реализовал более <b>100 проектов</b> в разных странах и отраслях.
 </p>
+
 <div class="stats">
-<div class="stat"><h3>100+</h3><p>проектов</p></div>
-<div class="stat"><h3>10+</h3><p>сфер бизнеса</p></div>
-<div class="stat"><h3>5+</h3><p>стран</p></div>
+
+<div class="stat">
+<h3>100+</h3>
+<p>проектов</p>
 </div>
+
+<div class="stat">
+<h3>10+</h3>
+<p>сфер бизнеса</p>
 </div>
+
+<div class="stat">
+<h3>5+</h3>
+<p>стран</p>
+</div>
+
+</div>
+
+</div>
+
 
 <div class="section" id="projects">
+
 <h2>Проекты</h2>
-<!-- Здесь можно будет добавить проекты позже -->
+
+<div class="projects-grid">
+
+<div class="project-card">
+<img src="project1.jpg">
+<div class="project-title">Брендинг ресторана</div>
 </div>
 
+<div class="project-card">
+<img src="project2.jpg">
+<div class="project-title">Логотип IT-стартапа</div>
+</div>
+
+<div class="project-card">
+<img src="project3.jpg">
+<div class="project-title">Маркетинг для eCommerce</div>
+</div>
+
+</div>
+
+</div>
+
+
 <div class="section">
+
 <h2>Контакты</h2>
+
 <div class="contact">
+
 <a class="telegram" href="https://t.me/start_xxx_stop" target="_blank">Telegram</a>
+
 <a class="email" href="mailto:start_xxx_stop@icloud.com">Email</a>
+
 <a class="whatsapp" href="https://wa.me/79002460611" target="_blank">WhatsApp</a>
+
 </div>
+
 </div>
+
 
 <div class="footer">© 2023–2026</div>
 
