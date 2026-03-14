@@ -25,54 +25,63 @@ margin:auto;
 padding:100px 20px;
 }
 
-/* HERO */
+/* HERO APPLE STYLE */
 
 .hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
 text-align:center;
-padding:80px 20px;
+padding:40px 20px;
 
-/* микросетка */
+background:
+linear-gradient(180deg,#ffffff 0%,#f7f7f7 100%),
 
-background-image:
 linear-gradient(#eee 1px, transparent 1px),
-linear-gradient(90deg, #eee 1px, transparent 1px);
+linear-gradient(90deg,#eee 1px, transparent 1px);
 
-background-size:40px 40px;
+background-size:100%,40px 40px;
+}
+
+.hero-inner{
+max-width:700px;
 }
 
 .logo{
-width:320px;
+width:340px;
 max-width:90%;
 display:block;
 margin:auto;
-margin-bottom:20px;
-margin-top:-20px;
+margin-bottom:30px;
 }
 
 .hero h1{
-font-size:36px;
-margin-bottom:10px;
+font-size:48px;
+line-height:1.2;
+margin-bottom:20px;
 }
 
 .hero p{
-font-size:20px;
+font-size:22px;
 color:#555;
 }
 
 .button{
 display:inline-block;
-margin-top:30px;
-padding:14px 28px;
+margin-top:35px;
+padding:16px 32px;
 background:#2563eb;
 color:white;
 text-decoration:none;
-border-radius:6px;
+border-radius:8px;
 font-weight:600;
 transition:0.3s;
 }
 
 .button:hover{
 background:#1d4ed8;
+transform:translateY(-2px);
 }
 
 h2{
@@ -117,15 +126,25 @@ margin-top:40px;
 
 .project-card{
 border:1px solid #eee;
-border-radius:8px;
+border-radius:10px;
 overflow:hidden;
-transition:0.3s;
 background:white;
+transition:0.4s;
+
+/* анимация */
+
+opacity:0;
+transform:translateY(40px);
+}
+
+.project-card.visible{
+opacity:1;
+transform:translateY(0);
 }
 
 .project-card:hover{
-transform:translateY(-6px);
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transform:translateY(-8px);
+box-shadow:0 12px 30px rgba(0,0,0,0.08);
 }
 
 .project-card img{
@@ -175,6 +194,8 @@ margin-top:80px;
 
 <div class="hero">
 
+<div class="hero-inner">
+
 <img src="logo.PNG" class="logo" alt="Andrew Li">
 
 <h1>Маркетинг и брендинг для бизнеса</h1>
@@ -184,6 +205,8 @@ margin-top:80px;
 </p>
 
 <a class="button" href="#projects">Посмотреть проекты</a>
+
+</div>
 
 </div>
 
@@ -260,8 +283,28 @@ margin-top:80px;
 
 </div>
 
-
 <div class="footer">© 2023–2026</div>
+
+
+<script>
+
+/* анимация появления карточек */
+
+const cards = document.querySelectorAll('.project-card');
+
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+}
+});
+});
+
+cards.forEach(card => {
+observer.observe(card);
+});
+
+</script>
 
 </body>
 </html>
