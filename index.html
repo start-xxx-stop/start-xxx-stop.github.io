@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>Andrew Li | Маркетинг и брендинг</title>
 
-<!-- Подключение Leaflet -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<!-- MapLibre GL JS -->
+<link href="https://unpkg.com/maplibre-gl@2.6.1/dist/maplibre-gl.css" rel="stylesheet"/>
+<script src="https://unpkg.com/maplibre-gl@2.6.1/dist/maplibre-gl.js"></script>
 
 <style>
 
@@ -322,7 +320,7 @@ h2 {
 </div>
 </div>
 
-<!-- --- Карта с метками --- -->
+<!-- --- Карта с метками (MapLibre OSM) --- -->
 <div class="section map-section">
   <div id="map"></div>
 </div>
@@ -392,7 +390,7 @@ cards.forEach(card=>{
 observer.observe(card);
 });
 
-// --- Карта с метками ---
+// --- Карта MapLibre GL JS ---
 const cities = [
   {name:'Архангельск', coords:[64.5393, 40.5177]},
   {name:'Вологда', coords:[59.2205, 39.8915]},
@@ -405,23 +403,23 @@ const cities = [
   {name:'Копенгаген', coords:[55.6761, 12.5683]},
   {name:'Антверпен', coords:[51.2194, 4.4025]},
   {name:'Мальмё', coords:[55.6050, 13.0038]},
-  {name:'Манила', coords:[14.5995, 120.9842]},
-  {name:'Нью Дели', coords:[28.6139, 77.2090]},
-  {name:'Мехико сити', coords:[19.4326, -99.1332]}
+  {name:'Манила', coords:[14.5995, 120.9842]}
 ];
 
-const map = L.map('map').setView([55.7558, 37.6173], 3); // центр Москва
-
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; OpenStreetMap contributors'
-}).addTo(map);
+const map = new maplibregl.Map({
+  container: 'map',
+  style: 'https://demotiles.maplibre.org/style.json',
+  center: [37.6173, 55.7558],
+  zoom: 2
+});
 
 cities.forEach(city => {
-  // рандомное смещение ±0.02 градуса (~2 км)
   const offsetLat = (Math.random()-0.5)*0.04;
   const offsetLng = (Math.random()-0.5)*0.04;
-  L.marker([city.coords[0]+offsetLat, city.coords[1]+offsetLng]).addTo(map)
-    .bindPopup(city.name);
+  new maplibregl.Marker()
+    .setLngLat([city.coords[1]+offsetLng, city.coords[0]+offsetLat])
+    .setPopup(new maplibregl.Popup({offset:25}).setText(city.name))
+    .addTo(map);
 });
 </script>
 
