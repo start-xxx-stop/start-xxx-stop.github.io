@@ -1,331 +1,94 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Andrew Li | Marketing & Branding</title>
+<title>Tacit Coast</title>
 
 <style>
 
-html{scroll-behavior:smooth;}
-
 body{
 margin:0;
-font-family:-apple-system,BlinkMacSystemFont,Arial;
+font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial;
 background:#fff;
 color:#111;
-line-height:1.6;
 }
 
 .container{
-max-width:1200px;
+max-width:1000px;
 margin:auto;
-padding:0 24px;
+padding:80px 20px;
 }
 
-section{
-padding:120px 0;
-}
-
-/* NAV */
-
-.nav{
+nav{
 position:fixed;
 top:0;
 width:100%;
 background:white;
 border-bottom:1px solid #eee;
-z-index:1000;
 }
 
 .nav-inner{
-max-width:1200px;
+max-width:1000px;
 margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:16px 24px;
+padding:18px 20px;
 }
 
-.nav a{
+nav a{
 text-decoration:none;
 color:#111;
-margin-left:24px;
+margin-left:20px;
 font-weight:500;
 }
 
-.nav a:hover{
-opacity:.6;
-}
-
-/* HERO */
-
 .hero{
-min-height:100vh;
+height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-
-background:
-linear-gradient(#f2f2f2 1px, transparent 1px),
-linear-gradient(90deg,#f2f2f2 1px, transparent 1px);
-
-background-size:40px 40px;
-}
-
-.hero-inner{
-max-width:760px;
-}
-
-.logo{
-width:320px;
-margin-bottom:40px;
 }
 
 .hero h1{
-font-size:56px;
-line-height:1.2;
-margin-bottom:24px;
+font-size:64px;
+margin:0;
 }
 
 .hero p{
 font-size:22px;
-color:#555;
-}
-
-.button{
-display:inline-block;
-margin-top:40px;
-padding:16px 34px;
-background:#2563eb;
-color:white;
-text-decoration:none;
-border-radius:8px;
-font-weight:600;
-transition:0.3s;
-}
-
-.button:hover{
-background:#1d4ed8;
-transform:translateY(-3px);
-}
-
-/* TITLES */
-
-h2{
-font-size:36px;
-margin-bottom:20px;
-}
-
-/* ABOUT */
-
-.about{
-font-size:18px;
-color:#444;
-max-width:700px;
-}
-
-.stats{
-display:flex;
-gap:50px;
-margin-top:30px;
-flex-wrap:wrap;
-}
-
-.stat h3{
-margin:0;
-font-size:34px;
-color:#2563eb;
-}
-
-.stat p{
-margin:4px 0 0;
 color:#666;
-}
-
-/* SKILLS */
-
-.skills-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:24px;
-margin-top:40px;
-}
-
-.skill-card{
-border:1px solid #eee;
-border-radius:14px;
-padding:28px;
-background:#fafafa;
-transition:.3s;
-}
-
-.skill-card:hover{
-background:white;
-transform:translateY(-6px);
-box-shadow:0 15px 40px rgba(0,0,0,0.06);
-}
-
-.skill-card h3{
-margin:0 0 10px;
-font-size:20px;
-}
-
-.skill-card p{
-margin:0;
-font-size:14px;
-color:#555;
-}
-
-/* SOFT SKILLS */
-
-.soft-skills{
-display:flex;
-flex-wrap:wrap;
-gap:12px;
 margin-top:20px;
 }
 
-.soft-skills span{
-background:#f4f4f4;
-padding:10px 16px;
-border-radius:20px;
-font-size:14px;
-}
-
-/* CASES */
-
-.projects-grid{
-display:grid;
-gap:60px;
-margin-top:50px;
-}
-
-.project-card{
-border:1px solid #eee;
-border-radius:16px;
-padding:50px;
-background:white;
-transition:.4s;
-
-opacity:0;
-transform:translateY(40px);
-}
-
-.project-card.visible{
-opacity:1;
-transform:translateY(0);
-}
-
-.project-card:hover{
-box-shadow:0 20px 60px rgba(0,0,0,0.08);
-}
-
-.project-title{
-font-size:28px;
-font-weight:700;
-margin-bottom:24px;
-}
-
-.case-grid{
+.projects{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:24px;
+gap:30px;
+margin-top:40px;
 }
 
-.case-block{
-background:#fafafa;
-padding:22px;
+.project{
+border:1px solid #eee;
 border-radius:12px;
-font-size:15px;
+padding:30px;
+transition:.3s;
 }
 
-.case-block b{
-display:block;
-margin-bottom:6px;
+.project:hover{
+transform:translateY(-6px);
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
 }
 
-/* METRICS */
-
-.metrics{
-display:flex;
-gap:40px;
-margin-top:30px;
-flex-wrap:wrap;
-}
-
-.metric{
-text-align:center;
-}
-
-.metric-number{
-font-size:36px;
-font-weight:700;
-color:#2563eb;
-}
-
-.metric-label{
-font-size:14px;
-color:#666;
-}
-
-.chart{
-height:6px;
-background:#eee;
-border-radius:10px;
-margin-top:12px;
-overflow:hidden;
-}
-
-.chart-fill{
-height:100%;
-background:#2563eb;
-}
-
-/* CONTACT */
-
-.contact{
-display:flex;
-gap:16px;
-justify-content:center;
-margin-top:30px;
-flex-wrap:wrap;
-}
-
-.contact a{
-padding:14px 24px;
-border-radius:8px;
-color:white;
-text-decoration:none;
-font-weight:600;
-}
-
-.telegram{background:#229ED9;}
-.email{background:#444;}
-.whatsapp{background:#25D366;}
-
-.footer{
+footer{
 text-align:center;
 padding:60px 20px;
-border-top:1px solid #eee;
 color:#777;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:38px;
-}
-
-.logo{
-width:220px;
-}
-
+border-top:1px solid #eee;
 }
 
 </style>
@@ -333,217 +96,83 @@ width:220px;
 
 <body>
 
-<div class="nav">
+<nav>
+
 <div class="nav-inner">
-<div><b>Andrew Li</b></div>
+
+<div><b>Tacit</b></div>
+
 <div>
 <a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Cases</a>
+<a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
 </div>
-</div>
+
 </div>
 
+</nav>
 
 <section class="hero">
 
-<div class="hero-inner">
+<div>
 
-<img src="logo.PNG" class="logo">
+<h1>Creative Developer</h1>
 
-<h1>Marketing & Branding<br>for modern business</h1>
-
-<p>
-From logo to marketing strategy.  
-Helping businesses grow revenue through strong branding.
-</p>
-
-<a class="button" href="#projects">View cases</a>
+<p>Building minimal digital experiences.</p>
 
 </div>
 
 </section>
 
-
-<section id="about">
-
-<div class="container">
+<section id="about" class="container">
 
 <h2>About</h2>
 
-<p class="about">
-Over the past years I have completed more than <b>100 projects</b>
-across different industries and countries.
+<p>
+Frontend developer focused on minimal design,
+clean code and fast websites.
 </p>
 
-<div class="stats">
+</section>
 
-<div class="stat">
-<h3>100+</h3>
-<p>projects</p>
+<section id="projects" class="container">
+
+<h2>Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+<h3>Brand Website</h3>
+<p>Design and development for modern brand.</p>
 </div>
 
-<div class="stat">
-<h3>10+</h3>
-<p>industries</p>
+<div class="project">
+<h3>Startup Landing</h3>
+<p>Landing page with marketing focus.</p>
 </div>
 
-<div class="stat">
-<h3>5+</h3>
-<p>countries</p>
-</div>
-
+<div class="project">
+<h3>Portfolio</h3>
+<p>Personal portfolio website.</p>
 </div>
 
 </div>
 
 </section>
 
-
-<section id="skills">
-
-<div class="container">
-
-<h2>Skills</h2>
-
-<div class="skills-grid">
-
-<div class="skill-card">
-<h3>Copywriting</h3>
-<p>Sales copy, advertising texts and brand content.</p>
-</div>
-
-<div class="skill-card">
-<h3>Design</h3>
-<p>Logos, visual identity and brand systems.</p>
-</div>
-
-<div class="skill-card">
-<h3>Marketing</h3>
-<p>Strategy, market research and advertising campaigns.</p>
-</div>
-
-<div class="skill-card">
-<h3>Programming</h3>
-<p>HTML, CSS and JavaScript for web interfaces.</p>
-</div>
-
-<div class="skill-card">
-<h3>Website creation</h3>
-<p>Landing pages and high-conversion websites.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section id="projects">
-
-<div class="container">
-
-<h2>Cases</h2>
-
-<div class="projects-grid">
-
-<div class="project-card">
-
-<div class="project-title">
-Growth of an online shoe store
-</div>
-
-<div class="case-grid">
-
-<div class="case-block">
-<b>Problem</b>
-Low conversion and expensive customer acquisition.
-</div>
-
-<div class="case-block">
-<b>Solution</b>
-Marketing audit, UX improvements and ad campaigns.
-</div>
-
-<div class="case-block">
-<b>Result</b>
-Conversion growth and scaling advertising.
-</div>
-
-</div>
-
-<div class="metrics">
-
-<div class="metric">
-<div class="metric-number">+310%</div>
-<div class="metric-label">sales growth</div>
-<div class="chart"><div class="chart-fill" style="width:90%"></div></div>
-</div>
-
-<div class="metric">
-<div class="metric-number">2.9%</div>
-<div class="metric-label">conversion</div>
-<div class="chart"><div class="chart-fill" style="width:70%"></div></div>
-</div>
-
-<div class="metric">
-<div class="metric-number">8x</div>
-<div class="metric-label">revenue</div>
-<div class="chart"><div class="chart-fill" style="width:95%"></div></div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section id="contact">
-
-<div class="container">
+<section id="contact" class="container">
 
 <h2>Contact</h2>
 
-<div class="contact">
-
-<a class="telegram" href="https://t.me/start_xxx_stop">Telegram</a>
-<a class="email" href="mailto:start_xxx_stop@icloud.com">Email</a>
-<a class="whatsapp" href="https://wa.me/79002460611">WhatsApp</a>
-
-</div>
-
-</div>
+<p>Email: hello@email.com</p>
 
 </section>
 
-<div class="footer">
-© 2023–2026 Andrew Li
-</div>
+<footer>
 
-<script>
+© 2026
 
-const cards = document.querySelectorAll('.project-card');
-
-const observer = new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add('visible');
-}
-});
-});
-
-cards.forEach(card=>{
-observer.observe(card);
-});
-
-</script>
+</footer>
 
 </body>
 </html>
