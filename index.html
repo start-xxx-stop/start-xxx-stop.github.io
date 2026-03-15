@@ -25,7 +25,7 @@ margin:auto;
 padding:100px 20px;
 }
 
-/* HERO APPLE STYLE */
+/* HERO */
 
 .hero{
 min-height:100vh;
@@ -37,7 +37,6 @@ padding:40px 20px;
 
 background:
 linear-gradient(180deg,#ffffff 0%,#f7f7f7 100%),
-
 linear-gradient(#eee 1px, transparent 1px),
 linear-gradient(90deg,#eee 1px, transparent 1px);
 
@@ -115,23 +114,21 @@ margin:4px 0 0;
 color:#666;
 }
 
-/* ПРОЕКТЫ */
+/* КЕЙСЫ */
 
 .projects-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
+grid-template-columns:1fr;
+gap:40px;
 margin-top:40px;
 }
 
 .project-card{
 border:1px solid #eee;
-border-radius:10px;
-overflow:hidden;
+border-radius:12px;
+padding:30px;
 background:white;
 transition:0.4s;
-
-/* анимация */
 
 opacity:0;
 transform:translateY(40px);
@@ -143,18 +140,22 @@ transform:translateY(0);
 }
 
 .project-card:hover{
-transform:translateY(-8px);
-box-shadow:0 12px 30px rgba(0,0,0,0.08);
-}
-
-.project-card img{
-width:100%;
-display:block;
+box-shadow:0 14px 40px rgba(0,0,0,0.08);
 }
 
 .project-title{
-padding:16px;
-font-weight:600;
+font-size:22px;
+font-weight:700;
+margin-bottom:15px;
+}
+
+.case-block{
+margin-top:15px;
+}
+
+.case-block b{
+display:block;
+margin-bottom:5px;
 }
 
 /* Контакты */
@@ -207,7 +208,6 @@ margin-top:80px;
 <a class="button" href="#projects">Посмотреть проекты</a>
 
 </div>
-
 </div>
 
 
@@ -243,23 +243,82 @@ margin-top:80px;
 
 <div class="section" id="projects">
 
-<h2>Проекты</h2>
+<h2>Кейсы</h2>
 
 <div class="projects-grid">
 
 <div class="project-card">
-<img src="project1.jpg">
-<div class="project-title">Брендинг ресторана</div>
+
+<div class="project-title">
+Рост продаж интернет-магазина обуви
 </div>
 
-<div class="project-card">
-<img src="project2.jpg">
-<div class="project-title">Логотип IT-стартапа</div>
+<div class="case-block">
+<b>Задача</b>
+Низкая конверсия сайта и высокая стоимость клиента.
 </div>
 
+<div class="case-block">
+<b>Решение</b>
+Маркетинговый аудит, переработка карточек товара, запуск сегментированной рекламы и ретаргетинга.
+</div>
+
+<div class="case-block">
+<b>Результат</b>
+Конверсия выросла с 0.7% до 2.9%.  
+Выручка увеличилась в 8 раз за 4 месяца.
+</div>
+
+</div>
+
+
 <div class="project-card">
-<img src="project3.jpg">
-<div class="project-title">Маркетинг для eCommerce</div>
+
+<div class="project-title">
+Брендинг и маркетинг ресторана
+</div>
+
+<div class="case-block">
+<b>Задача</b>
+Новый ресторан без узнаваемости и потока гостей.
+</div>
+
+<div class="case-block">
+<b>Решение</b>
+Создание бренда, айдентики, фотоконтента и запуск локальной рекламы.
+</div>
+
+<div class="case-block">
+<b>Результат</b>
+Полная загрузка ресторана в течение 3 месяцев.  
+Более 6000 гостей за первый квартал.
+</div>
+
+</div>
+
+
+<div class="project-card">
+
+<div class="project-title">
+Маркетинг для IT-стартапа
+</div>
+
+<div class="case-block">
+<b>Задача</b>
+Привлечение первых пользователей продукта.
+</div>
+
+<div class="case-block">
+<b>Решение</b>
+Разработка позиционирования, лендинга и запуск performance-маркетинга.
+</div>
+
+<div class="case-block">
+<b>Результат</b>
+10 000 пользователей за первые 5 месяцев  
+и привлечение инвестиций.
+</div>
+
 </div>
 
 </div>
@@ -288,19 +347,17 @@ margin-top:80px;
 
 <script>
 
-/* анимация появления карточек */
-
 const cards = document.querySelectorAll('.project-card');
 
-const observer = new IntersectionObserver(entries => {
-entries.forEach(entry => {
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
 if(entry.isIntersecting){
 entry.target.classList.add('visible');
 }
 });
 });
 
-cards.forEach(card => {
+cards.forEach(card=>{
 observer.observe(card);
 });
 
