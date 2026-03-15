@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Andrew Li | Маркетинг и брендинг</title>
+<title>Andrew Li | Marketing & Branding</title>
 
 <style>
 
@@ -19,10 +19,45 @@ color:#111;
 line-height:1.6;
 }
 
-.section{
-max-width:1100px;
+.container{
+max-width:1200px;
 margin:auto;
-padding:100px 20px;
+padding:0 24px;
+}
+
+section{
+padding:120px 0;
+}
+
+/* NAV */
+
+.nav{
+position:fixed;
+top:0;
+width:100%;
+background:white;
+border-bottom:1px solid #eee;
+z-index:1000;
+}
+
+.nav-inner{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:16px 24px;
+}
+
+.nav a{
+text-decoration:none;
+color:#111;
+margin-left:24px;
+font-weight:500;
+}
+
+.nav a:hover{
+opacity:.6;
 }
 
 /* HERO */
@@ -33,32 +68,27 @@ display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:40px 20px;
 
 background:
-linear-gradient(180deg,#ffffff 0%,#f7f7f7 100%),
-linear-gradient(#eee 1px, transparent 1px),
-linear-gradient(90deg,#eee 1px, transparent 1px);
+linear-gradient(#f2f2f2 1px, transparent 1px),
+linear-gradient(90deg,#f2f2f2 1px, transparent 1px);
 
-background-size:100%,40px 40px;
+background-size:40px 40px;
 }
 
 .hero-inner{
-max-width:700px;
+max-width:760px;
 }
 
 .logo{
-width:340px;
-max-width:90%;
-display:block;
-margin:auto;
-margin-bottom:30px;
+width:320px;
+margin-bottom:40px;
 }
 
 .hero h1{
-font-size:48px;
+font-size:56px;
 line-height:1.2;
-margin-bottom:20px;
+margin-bottom:24px;
 }
 
 .hero p{
@@ -68,8 +98,8 @@ color:#555;
 
 .button{
 display:inline-block;
-margin-top:35px;
-padding:16px 32px;
+margin-top:40px;
+padding:16px 34px;
 background:#2563eb;
 color:white;
 text-decoration:none;
@@ -80,27 +110,29 @@ transition:0.3s;
 
 .button:hover{
 background:#1d4ed8;
-transform:translateY(-2px);
+transform:translateY(-3px);
 }
 
+/* TITLES */
+
 h2{
-font-size:34px;
+font-size:36px;
 margin-bottom:20px;
 }
+
+/* ABOUT */
 
 .about{
 font-size:18px;
 color:#444;
-max-width:650px;
+max-width:700px;
 }
-
-/* статистика */
 
 .stats{
 display:flex;
-gap:40px;
-flex-wrap:wrap;
+gap:50px;
 margin-top:30px;
+flex-wrap:wrap;
 }
 
 .stat h3{
@@ -118,22 +150,23 @@ color:#666;
 
 .skills-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-margin-top:30px;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:24px;
+margin-top:40px;
 }
 
 .skill-card{
 border:1px solid #eee;
-border-radius:12px;
-padding:24px;
+border-radius:14px;
+padding:28px;
 background:#fafafa;
-transition:0.3s;
+transition:.3s;
 }
 
 .skill-card:hover{
-background:#fff;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
+background:white;
+transform:translateY(-6px);
+box-shadow:0 15px 40px rgba(0,0,0,0.06);
 }
 
 .skill-card h3{
@@ -147,10 +180,12 @@ font-size:14px;
 color:#555;
 }
 
+/* SOFT SKILLS */
+
 .soft-skills{
 display:flex;
 flex-wrap:wrap;
-gap:14px;
+gap:12px;
 margin-top:20px;
 }
 
@@ -161,21 +196,20 @@ border-radius:20px;
 font-size:14px;
 }
 
-/* КЕЙСЫ */
+/* CASES */
 
 .projects-grid{
 display:grid;
-grid-template-columns:1fr;
 gap:60px;
-margin-top:40px;
+margin-top:50px;
 }
 
 .project-card{
 border:1px solid #eee;
 border-radius:16px;
-padding:40px;
+padding:50px;
 background:white;
-transition:0.4s;
+transition:.4s;
 
 opacity:0;
 transform:translateY(40px);
@@ -187,26 +221,25 @@ transform:translateY(0);
 }
 
 .project-card:hover{
-box-shadow:0 18px 60px rgba(0,0,0,0.08);
+box-shadow:0 20px 60px rgba(0,0,0,0.08);
 }
 
 .project-title{
-font-size:26px;
+font-size:28px;
 font-weight:700;
-margin-bottom:20px;
+margin-bottom:24px;
 }
 
 .case-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-margin-top:20px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:24px;
 }
 
 .case-block{
 background:#fafafa;
-padding:20px;
-border-radius:10px;
+padding:22px;
+border-radius:12px;
 font-size:15px;
 }
 
@@ -215,7 +248,7 @@ display:block;
 margin-bottom:6px;
 }
 
-/* метрики */
+/* METRICS */
 
 .metrics{
 display:flex;
@@ -252,19 +285,19 @@ height:100%;
 background:#2563eb;
 }
 
-/* Контакты */
+/* CONTACT */
 
 .contact{
 display:flex;
-gap:14px;
-flex-wrap:nowrap;
+gap:16px;
 justify-content:center;
-margin-top:25px;
+margin-top:30px;
+flex-wrap:wrap;
 }
 
 .contact a{
-padding:12px 22px;
-border-radius:6px;
+padding:14px 24px;
+border-radius:8px;
 color:white;
 text-decoration:none;
 font-weight:600;
@@ -276,10 +309,23 @@ font-weight:600;
 
 .footer{
 text-align:center;
-padding:40px;
+padding:60px 20px;
 border-top:1px solid #eee;
 color:#777;
-margin-top:80px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:38px;
+}
+
+.logo{
+width:220px;
+}
+
 }
 
 </style>
@@ -287,132 +333,143 @@ margin-top:80px;
 
 <body>
 
-<div class="hero">
+<div class="nav">
+<div class="nav-inner">
+<div><b>Andrew Li</b></div>
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Cases</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+</div>
+
+
+<section class="hero">
 
 <div class="hero-inner">
 
-<img src="logo.PNG" class="logo" alt="Andrew Li">
+<img src="logo.PNG" class="logo">
 
-<h1>Маркетинг и брендинг для бизнеса</h1>
+<h1>Marketing & Branding<br>for modern business</h1>
 
 <p>
-От логотипа до маркетинга. Строим фундамент сильного бренда и помогаем бизнесу повышать продажи.
+From logo to marketing strategy.  
+Helping businesses grow revenue through strong branding.
 </p>
 
-<a class="button" href="#projects">Посмотреть кейсы</a>
+<a class="button" href="#projects">View cases</a>
 
 </div>
-</div>
+
+</section>
 
 
-<div class="section">
+<section id="about">
 
-<h2>Обо мне</h2>
+<div class="container">
+
+<h2>About</h2>
 
 <p class="about">
-За последние годы реализовано более <b>100 проектов</b> в разных странах и отраслях.
+Over the past years I have completed more than <b>100 projects</b>
+across different industries and countries.
 </p>
 
 <div class="stats">
 
 <div class="stat">
 <h3>100+</h3>
-<p>проектов</p>
+<p>projects</p>
 </div>
 
 <div class="stat">
 <h3>10+</h3>
-<p>сфер бизнеса</p>
+<p>industries</p>
 </div>
 
 <div class="stat">
 <h3>5+</h3>
-<p>стран</p>
+<p>countries</p>
 </div>
 
 </div>
 
 </div>
 
+</section>
 
-<div class="section">
 
-<h2>Навыки</h2>
+<section id="skills">
 
-<h3>Hard Skills</h3>
+<div class="container">
+
+<h2>Skills</h2>
 
 <div class="skills-grid">
 
 <div class="skill-card">
-<h3>Копирайтинг</h3>
-<p>Создание продающих текстов, рекламных объявлений и контента для брендов.</p>
+<h3>Copywriting</h3>
+<p>Sales copy, advertising texts and brand content.</p>
 </div>
 
 <div class="skill-card">
-<h3>Дизайн</h3>
-<p>Разработка логотипов, айдентики и визуальных систем бренда.</p>
+<h3>Design</h3>
+<p>Logos, visual identity and brand systems.</p>
 </div>
 
 <div class="skill-card">
-<h3>Маркетинг</h3>
-<p>Анализ рынка, стратегия продвижения и управление рекламными кампаниями.</p>
+<h3>Marketing</h3>
+<p>Strategy, market research and advertising campaigns.</p>
 </div>
 
 <div class="skill-card">
-<h3>Программирование</h3>
-<p>HTML, CSS и базовый JavaScript для разработки веб-интерфейсов.</p>
+<h3>Programming</h3>
+<p>HTML, CSS and JavaScript for web interfaces.</p>
 </div>
 
 <div class="skill-card">
-<h3>Создание сайтов</h3>
-<p>Разработка лендингов и сайтов с высокой конверсией.</p>
+<h3>Website creation</h3>
+<p>Landing pages and high-conversion websites.</p>
 </div>
-
-</div>
-
-<h3 style="margin-top:50px;">Soft Skills</h3>
-
-<div class="soft-skills">
-
-<span>Стратегическое мышление</span>
-<span>Коммуникация</span>
-<span>Аналитическое мышление</span>
-<span>Креативность</span>
-<span>Управление проектами</span>
-<span>Работа с клиентами</span>
 
 </div>
 
 </div>
 
+</section>
 
-<div class="section" id="projects">
 
-<h2>Кейсы</h2>
+<section id="projects">
+
+<div class="container">
+
+<h2>Cases</h2>
 
 <div class="projects-grid">
 
 <div class="project-card">
 
 <div class="project-title">
-Рост продаж интернет-магазина обуви
+Growth of an online shoe store
 </div>
 
 <div class="case-grid">
 
 <div class="case-block">
-<b>Задача</b>
-Низкая конверсия сайта и высокая стоимость клиента.
+<b>Problem</b>
+Low conversion and expensive customer acquisition.
 </div>
 
 <div class="case-block">
-<b>Решение</b>
-Аудит маркетинга, оптимизация карточек товара и запуск рекламы.
+<b>Solution</b>
+Marketing audit, UX improvements and ad campaigns.
 </div>
 
 <div class="case-block">
-<b>Результат</b>
-Рост конверсии и масштабирование рекламных кампаний.
+<b>Result</b>
+Conversion growth and scaling advertising.
 </div>
 
 </div>
@@ -421,19 +478,19 @@ margin-top:80px;
 
 <div class="metric">
 <div class="metric-number">+310%</div>
-<div class="metric-label">рост продаж</div>
+<div class="metric-label">sales growth</div>
 <div class="chart"><div class="chart-fill" style="width:90%"></div></div>
 </div>
 
 <div class="metric">
 <div class="metric-number">2.9%</div>
-<div class="metric-label">конверсия сайта</div>
+<div class="metric-label">conversion</div>
 <div class="chart"><div class="chart-fill" style="width:70%"></div></div>
 </div>
 
 <div class="metric">
 <div class="metric-number">8x</div>
-<div class="metric-label">рост выручки</div>
+<div class="metric-label">revenue</div>
 <div class="chart"><div class="chart-fill" style="width:95%"></div></div>
 </div>
 
@@ -445,25 +502,30 @@ margin-top:80px;
 
 </div>
 
+</section>
 
-<div class="section">
 
-<h2>Контакты</h2>
+<section id="contact">
+
+<div class="container">
+
+<h2>Contact</h2>
 
 <div class="contact">
 
-<a class="telegram" href="https://t.me/start_xxx_stop" target="_blank">Telegram</a>
-
+<a class="telegram" href="https://t.me/start_xxx_stop">Telegram</a>
 <a class="email" href="mailto:start_xxx_stop@icloud.com">Email</a>
-
-<a class="whatsapp" href="https://wa.me/79002460611" target="_blank">WhatsApp</a>
-
-</div>
+<a class="whatsapp" href="https://wa.me/79002460611">WhatsApp</a>
 
 </div>
 
-<div class="footer">© 2023–2026</div>
+</div>
 
+</section>
+
+<div class="footer">
+© 2023–2026 Andrew Li
+</div>
 
 <script>
 
